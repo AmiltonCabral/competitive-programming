@@ -7,13 +7,13 @@ int main() {
     cin >> n;
 
     vector<int> d(n);
-    for (int i=0; i<n; i++) {
+    for (int i = 0; i < n; i++) {
         cin >> d[i];
     }
 
-    long long sum1=0, sum3=0, max_sum=0;
+    long long sum1 = 0, sum3 = 0, max_sum = 0;
 
-    for (int i=0, j=n-1; i<=j;) {
+    for (int i = 0, j = n - 1; i <= j;) {
         if (sum1 > sum3) {
             sum3 += d[j--];
         } else {
