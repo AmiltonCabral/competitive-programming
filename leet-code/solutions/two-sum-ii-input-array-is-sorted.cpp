@@ -3,6 +3,8 @@ using namespace std;
 
 class Solution {
    public:
+    // this isnt the best solution. You can use two pointers method to get ans
+    // on O(n)
     vector<int> twoSum(vector<int>& numbers, int target) {
         vector<int> ans(2);
         for (int i = 0; i < numbers.size(); i++) {
