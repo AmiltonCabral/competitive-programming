@@ -16,3 +16,9 @@ int val = 5;
 // which compares greater than val.
 int index = upper_bound(arr.begin(), arr.end(), val) - arr.begin();
 ```
+
+```cpp
+// Faster cin cout
+ios_base::sync_with_stdio(0);
+cin.tie(0); // don't use on interactive programs
+```
