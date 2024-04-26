@@ -8,11 +8,9 @@ class Solution {
         int l = 0, r = 0, longest = 0, locallen = 0;
         while (r < s.size()) {
             if (wset.count(s[r])) {
-                while (wset.count(s[r])) {
-                    wset.erase(s[l]);
-                    locallen--;
-                    l++;
-                }
+                wset.erase(s[l]);
+                locallen--;
+                l++;
             } else {
                 wset.insert(s[r]);
                 locallen++;
