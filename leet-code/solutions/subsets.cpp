@@ -27,6 +27,26 @@ class Solution {
     }
 };
 
+class Solution2 {
+   public:
+    vector<vector<int>> ans;
+    void bt(vector<int>& nums, vector<int> sub, int i) {
+        if (i == nums.size()) {
+            ans.push_back(sub);
+        } else {
+            bt(nums, sub, i + 1);
+            sub.push_back(nums[i]);
+            bt(nums, sub, i + 1);
+        }
+    }
+
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<int> sub;
+        bt(nums, sub, 0);
+        return ans;
+    }
+};
+
 int main() {
     Solution sol;
     vector<int> nums = {1, 2, 3};
