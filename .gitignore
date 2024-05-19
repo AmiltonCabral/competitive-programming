@@ -99,3 +99,6 @@ replay_pid*
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# CPH Judge
+.cph
