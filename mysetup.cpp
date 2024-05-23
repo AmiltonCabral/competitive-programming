@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
+#define ll long long
 #define ff first
 #define ss second
 #define pb push_back

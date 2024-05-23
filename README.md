@@ -12,6 +12,9 @@ gcc -o \_exe ./code.cpp && ./\_exe
 vector<int> arr(100);
 int val = 5;
 
+// retorna falso se o char c nao for alfa numerico
+isalnum(c) == 0
+
 // x % y para ponto flutuante
 fmod(float x, int y)
 
