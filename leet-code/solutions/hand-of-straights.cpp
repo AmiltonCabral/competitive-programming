@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Time: O(n log n); Space: O(1)
 class Solution {
    public:
     bool isNStraightHand(vector<int>& hand, int groupSize) {
@@ -36,5 +37,5 @@ int main() {
     vector<int> hand = {1, 1, 2, 2, 3, 3};
     int groupSize = 2;
     bool ans = sol.isNStraightHand(hand, groupSize);
-    cout << ans << endl;
+    cout << (ans ? "true" : "false") << endl;
 }
