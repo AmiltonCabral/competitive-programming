@@ -34,3 +34,16 @@ int index = upper_bound(arr.begin(), arr.end(), val) - arr.begin();
 ios_base::sync_with_stdio(0);
 cin.tie(0); // don't use on interactive programs
 ```
+
+### ordered_set
+
+```cpp
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+typedef **gnu_pbds::tree<int, **gnu_pbds::null_type, less<int>, **gnu_pbds::rb_tree_tag, **gnu_pbds::tree_order_statistics_node_update> ordered_set;
+
+ordered_set st;
+
+//return the number of items in a set that are strictly smaller than our item.
+int index = st.order_of_key(16);
+```
