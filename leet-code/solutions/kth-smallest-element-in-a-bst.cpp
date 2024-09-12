@@ -43,6 +43,30 @@ class Solution {
 
         return -1;
     }
+
+    // in order approach
+    int kthSmallestV2(TreeNode *root, int k) {
+        int ans;
+        bool finished = false;
+
+        function<void(TreeNode *)> inOrder = [&](TreeNode *node) {
+            if (node && !finished) {
+                inOrder(node->left);
+
+                --k;
+                if (k == 0) {
+                    ans = node->val;
+                    finished = true;
+                }
+
+                inOrder(node->right);
+            }
+        };
+
+        inOrder(root);
+
+        return ans;
+    }
 };
 
 int main() {
