@@ -10,7 +10,6 @@ class Solution {
 
         function<void(int, int, int)> dfs = [&](int i, int r, int c) {
             if (found) return;
-            string key = to_string(r) + '*' + to_string(c);
             if (board[r][c] == '#') return;
             if (i == word.size() - 1) {
                 found = true;
@@ -37,11 +36,11 @@ class Solution {
 
         for (int i = 0; i < m; ++i) {
             for (int j = 0; j < n; ++j) {
-                if (found) {
-                    return true;
-                }
                 if (board[i][j] == word[0]) {
                     dfs(0, i, j);
+                }
+                if (found) {
+                    return true;
                 }
             }
         }
