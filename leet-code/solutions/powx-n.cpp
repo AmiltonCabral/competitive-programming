@@ -2,31 +2,31 @@
 using namespace std;
 
 class Solution {
+   private:
+    double recPow(double x, int n) {
+        if (x == 0) return 0;
+        if (n == 0) return 1;
+
+        double result = myPow(x, n / 2);
+
+        result *= result;
+
+        if (n % 2 == 1) {
+            result *= x;
+        }
+
+        return result;
+    }
+
    public:
     double myPow(double x, int n) {
-        if (n == 0) return 1.0;
+        const int expoent = abs(n);
 
-        double ans = x;
+        double ans = recPow(x, expoent);
 
         if (n < 0) {
-            n *= -1;
-            x = 1 / x;
+            ans = 1 / ans;
         }
-
-        int i = 1;
-        while (i + i < n) {
-            ans *= ans;
-            i += i;
-        }
-
-        while (i < n) {
-            ans *= x;
-            ++i;
-        }
-
-        // while (n--) {
-        //     ans *= x;
-        // }
 
         return ans;
     }
@@ -37,6 +37,5 @@ int main() {
     double x = 2.00000;
     int n = 10;
     double ans = sol.myPow(x, n);
-
     cout << ans << endl;
 }
