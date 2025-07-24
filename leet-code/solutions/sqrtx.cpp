@@ -3,7 +3,7 @@ using namespace std;
 
 class Solution {
    public:
-    // Time = O(x)
+    // Time = O(sqrt x)
     int mySqrt1(int x) {
         long long prev = 0;
 
