@@ -3,6 +3,7 @@ using namespace std;
 
 class Solution {
    public:
+    // Time = O(x)
     int mySqrt1(int x) {
         long long prev = 0;
 
@@ -14,6 +15,7 @@ class Solution {
         return prev;
     }
 
+    // Time = O(log x)
     int mySqrt(int x) {
         int ans;
         int l = 0;
